@@ -1,7 +1,7 @@
-let timer = setInterval(newWord, 200);
+let timer = setInterval(newWord, 300);
+
 
 function newWord() {
-
 
     let paths = [
       'M720 0H0V458V900H720V458V0ZM720 458L360 818L0 458L360 97.9999L720 458Z',
@@ -20,7 +20,7 @@ function newWord() {
     ]
 
     let words = [
-      'paque','ffers','ddity','nions','rigin','scars','lives','ctane','rgasm','xidic','bjets','utbox','ffice','ccult','rganic','ccupy','bvious','btain','ptimist','rator','il','rbit','range','melet','possum','ptical','ptions','ffice','rchid','uch','utlaw','zone','xygen','verview','verseas','verall','atmeal	','cean','dyssey','ffshore','pinion','kay'];
+      'paque','ffers','ddity','nions','rigin','scars','lives','ctane','rgasm','xidic','bjects','utbox','ffice','ccult','rganic','ccupy','bvious','btain','ptimist','rator','il','rbit','range','melet','possum','ptical','ptions','ffice','rchid','uch','utlaw','zone','xygen','verview','verseas','verall','atmeal	','cean','dyssey','ffshore','pinion','kay','utfit','wn','mg','nion','utdoor','wl','atmeal','pen','ften','strich','ctopus'];
 
     let colors = [
           '#FFF',
@@ -73,7 +73,6 @@ setInterval(() => {
   clearInterval(timer);
 }, 2500);
 
-
 let root = document.documentElement;
 
 root.addEventListener("mousemove", e => {
@@ -86,8 +85,8 @@ root.addEventListener("mousemove", e => {
 // сохранение картинки
 // кэпшены
 // мобила
-// видео
-// слов докинуть
+
+
 
 
 /// randomly change from time to time
