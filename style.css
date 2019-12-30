@@ -17,9 +17,83 @@ html {
 }
 
 body {
-    animation: appear ease-in 0.3s;
+    animation: appear ease-in 0.5s;
     cursor: none;
 }
+
+
+
+/*LOADER*/
+.loader-body {
+	width: 100%;
+	height: 100vh;
+	background-color: black; /*Here you can change background color of the loader */
+	position: fixed;
+	z-index: 2;
+	visibility: visible;
+	top: 0;
+	left: 0;
+	text-align: center;
+	justify-content: center;
+	align-content: center;
+	transition: 0.5s all;
+}
+.loader {
+	width: 4vh;
+	height: 4vh;
+/*	border: 12px white solid;*/ 				/*Here you can change color of the loader*/
+/*	border-radius: 50%;*/
+	position: absolute;
+/*	border-top-color: red ;*/ 				/*Here you can change color of the loader*/
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+/*	-webkit-animation: 1s spin infinite linear;
+	-o-animation: 1s spin infinite linear;
+	animation: 1s spin infinite linear;*/
+
+}
+.loader-body.done {
+	visibility: hidden;
+	opacity: 0;
+}
+@keyframes spin {
+	from {
+		transform: translate(-50%, -50%) rotate(0deg);
+	}
+	to {
+		transform: translate(-50%, -50%) rotate(360deg);
+	}
+}
+
+.spinner {
+  animation: rotate 1.4s linear infinite;
+  -webkit-animation: rotate 1.4s linear infinite;
+  -moz-animation: rotate 1.4s linear infinite;
+  position: relative;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes rotate {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
 
 @keyframes appear {
     from {
@@ -70,6 +144,10 @@ body {
     justify-content: flex-end;
 }
 
+.little > a {
+    text-decoration: none;
+    color: #FFEC3E;
+}
 
 .little {
     writing-mode: vertical-lr;
@@ -109,7 +187,7 @@ body {
  }
 
 .top {
-    flex-grow: 1;
+    /* flex-grow: 1; */
     display: flex;
     flex-direction: column;
     padding-top: 0.5vw;
@@ -270,14 +348,14 @@ body {
      }
 
     .col1 {
-        writing-mode: sideways-lr;
+        /* writing-mode: sideways-lr; */
         -moz-text-stroke-width: 2px;  
         -webkit-text-stroke-width: 2px;
         
     }
 
     .col2 {
-        writing-mode: sideways-lr;
+        /* writing-mode: sideways-lr; */
         -moz-text-stroke-width: 2px;  
         -webkit-text-stroke-width: 2px;
     }
@@ -298,7 +376,8 @@ body {
     }
 
     .top {
-        flex-direction: row;
+        flex-direction: column;
+        writing-mode: vertical-lr;
     }
 
     .big {
@@ -321,7 +400,7 @@ body {
     }
 
     .little {
-        writing-mode: vertical-lr;
+        writing-mode: tb-rl;
         font-size: 10vw;   
         line-height: 9vw;
         color:#000;

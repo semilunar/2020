@@ -1,3 +1,13 @@
+document.body.onload = function(){
+  setTimeout(function() {
+    var preloader = document.getElementById('loader');
+    if( !preloader.classList.contains('done') )
+    {
+      preloader.classList.add('done');
+    }
+  }, 500)
+}
+
 let timer = setInterval(newWord, 300);
 
 
@@ -79,6 +89,15 @@ root.addEventListener("mousemove", e => {
   root.style.setProperty('--mouse-x', e.clientX + "px");
   root.style.setProperty('--mouse-y', e.clientY + "px");
 });
+
+
+
+
+
+let body = document.querySelector('.caption-container');
+body.addEventListener('click', newWord);
+
+
 
 
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
