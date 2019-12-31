@@ -79,12 +79,12 @@
         -moz-text-stroke-color: black;
         -webkit-text-stroke-color: black;
         -moz-text-stroke-width: 2px;
-        -webkit-text-stroke-width: 2px;
+        -webkit-text-s  troke-width: 2px;
     }
 
     .little {
         writing-mode: vertical-lr;
-        font-size: 4vw;
+        font-size: 6vw;
         line-height: 3vw;
         color: #FFEC3E;
         -moz-text-stroke-color: black;
@@ -110,6 +110,7 @@
         flex-direction: column;
         align-content: space-around;
         overflow: hidden;
+        padding: 20px;
     }
 
     .shapes-container {
@@ -138,7 +139,7 @@
         flex-direction: column;
         /* align-items: flex-end; */
         justify-content: flex-end;
-        padding-left: 20px;
+        /* padding-left: 20px; */
     }
 
 
@@ -179,8 +180,8 @@
         color: #FFEC3E;
         -moz-text-stroke-color: black;
         -webkit-text-stroke-color: black;
-        -moz-text-stroke-width: 3px;
-        -webkit-text-stroke-width: 3px;
+        -moz-text-stroke-width: 2px;
+        -webkit-text-stroke-width: 2px;
     }
 
 
@@ -202,6 +203,9 @@
         fill: var(--fill-right-b);
     }
 
+    .mobile-c {
+        display: none;
+    }
 
     .big {
         font-size: 21vw;
@@ -268,7 +272,10 @@
 
     @media (max-width: 420px) {
 
+
+
         .shapes-container {
+            display: none;
             width: 100%;
             height: calc(var(--vh, 1vh) * 100);
             position: absolute;
@@ -307,6 +314,7 @@
         }
 
         .container {
+            display: none;
             width: 100%;
             height: 100vh;
             display: flex;
@@ -344,6 +352,14 @@
             font-size: 10vw;
             line-height: 9vw;
             color: #000;
+        }
+
+        .caption-container {
+            display: none;
+        }
+
+        .cursor-container {
+            display: none;
         }
 
     }
